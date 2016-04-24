@@ -81,7 +81,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"cellForItemAtIndexPath - %d - %d", indexPath.section, indexPath.row);
+    NSLog(@"cellForItemAtIndexPath - %ld - %ld", indexPath.section, indexPath.row);
     NSString *identifier = @"JustOneLabelCell";
     switch (indexPath.section) {
         case 0:

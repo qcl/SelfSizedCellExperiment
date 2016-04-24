@@ -48,7 +48,7 @@
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"CustomFlowLayout - layoutAttributesForItemAtIndexPath - %d - %d", indexPath.section, indexPath.row);
+    NSLog(@"CustomFlowLayout - layoutAttributesForItemAtIndexPath - %ld - %ld", indexPath.section, indexPath.row);
     UICollectionViewLayoutAttributes *attribute = [super layoutAttributesForItemAtIndexPath:indexPath];
     NSLog(@"    ~attribute - %@", attribute);
     return attribute;

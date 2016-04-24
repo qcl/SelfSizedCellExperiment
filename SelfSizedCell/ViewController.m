@@ -66,7 +66,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"cellForItemAtIndexPath - %d - %d", indexPath.section, indexPath.row);
+    NSLog(@"cellForItemAtIndexPath - %ld - %ld", indexPath.section, indexPath.row);
     NSString *identifier = @"JustOneLabelCell";
     switch (indexPath.row) {
         case 2:
@@ -102,7 +102,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"sizeForItemAtIndexPath - %d - %d", indexPath.section, indexPath.row);
+    NSLog(@"sizeForItemAtIndexPath - %ld - %ld", indexPath.section, indexPath.row);
     return CGSizeMake(collectionView.frame.size.width, 50.0f);
 }
 
