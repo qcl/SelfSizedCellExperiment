@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C3182581CCCC3F40097114C /* JustOneLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3182561CCCC3F40097114C /* JustOneLabelCell.m */; };
+		7C3182591CCCC3F40097114C /* JustOneLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C3182571CCCC3F40097114C /* JustOneLabelCell.xib */; };
+		7C31825C1CCCC78C0097114C /* HandMadeOneLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31825B1CCCC78C0097114C /* HandMadeOneLabelCell.m */; };
 		7C54AE021CCCBAA100C06B6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C54AE011CCCBAA100C06B6A /* main.m */; };
 		7C54AE051CCCBAA100C06B6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C54AE041CCCBAA100C06B6A /* AppDelegate.m */; };
 		7C54AE081CCCBAA100C06B6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C54AE071CCCBAA100C06B6A /* ViewController.m */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C3182551CCCC3F40097114C /* JustOneLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JustOneLabelCell.h; path = Cell/JustOneLabelCell.h; sourceTree = "<group>"; };
+		7C3182561CCCC3F40097114C /* JustOneLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JustOneLabelCell.m; path = Cell/JustOneLabelCell.m; sourceTree = "<group>"; };
+		7C3182571CCCC3F40097114C /* JustOneLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JustOneLabelCell.xib; path = Cell/JustOneLabelCell.xib; sourceTree = "<group>"; };
+		7C31825A1CCCC78C0097114C /* HandMadeOneLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandMadeOneLabelCell.h; path = Cell/HandMadeOneLabelCell.h; sourceTree = "<group>"; };
+		7C31825B1CCCC78C0097114C /* HandMadeOneLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HandMadeOneLabelCell.m; path = Cell/HandMadeOneLabelCell.m; sourceTree = "<group>"; };
 		7C54ADFD1CCCBAA000C06B6A /* SelfSizedCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfSizedCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C54AE011CCCBAA100C06B6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C54AE031CCCBAA100C06B6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +92,11 @@
 		7C54AE171CCCC27500C06B6A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				7C3182551CCCC3F40097114C /* JustOneLabelCell.h */,
+				7C3182561CCCC3F40097114C /* JustOneLabelCell.m */,
+				7C3182571CCCC3F40097114C /* JustOneLabelCell.xib */,
+				7C31825A1CCCC78C0097114C /* HandMadeOneLabelCell.h */,
+				7C31825B1CCCC78C0097114C /* HandMadeOneLabelCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -153,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C54AE101CCCBAA100C06B6A /* LaunchScreen.storyboard in Resources */,
+				7C3182591CCCC3F40097114C /* JustOneLabelCell.xib in Resources */,
 				7C54AE0D1CCCBAA100C06B6A /* Assets.xcassets in Resources */,
 				7C54AE0B1CCCBAA100C06B6A /* Main.storyboard in Resources */,
 			);
@@ -166,8 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C54AE081CCCBAA100C06B6A /* ViewController.m in Sources */,
+				7C3182581CCCC3F40097114C /* JustOneLabelCell.m in Sources */,
 				7C54AE051CCCBAA100C06B6A /* AppDelegate.m in Sources */,
 				7C54AE021CCCBAA100C06B6A /* main.m in Sources */,
+				7C31825C1CCCC78C0097114C /* HandMadeOneLabelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +334,7 @@
 				7C54AE161CCCBAA100C06B6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,9 +16,29 @@
                     <view key="view" contentMode="scaleToFill" id="Bwb-r6-gvT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-qs-zVa">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iMA-1D-ha5">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="01h-ik-QWW" firstAttribute="top" secondItem="XVg-qs-zVa" secondAttribute="bottom" id="4uc-WJ-bRE"/>
+                            <constraint firstItem="XVg-qs-zVa" firstAttribute="leading" secondItem="Bwb-r6-gvT" secondAttribute="leading" id="5D7-o5-TdQ"/>
+                            <constraint firstAttribute="trailing" secondItem="XVg-qs-zVa" secondAttribute="trailing" id="H5G-GR-MBA"/>
+                            <constraint firstItem="XVg-qs-zVa" firstAttribute="top" secondItem="0Ms-Gb-fos" secondAttribute="bottom" id="Hce-Cw-xra"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eB1-CE-Bw1"/>
+                    <connections>
+                        <outlet property="collectionView" destination="XVg-qs-zVa" id="pqr-qm-r8W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krv-wN-8mM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
