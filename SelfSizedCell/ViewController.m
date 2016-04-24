@@ -11,6 +11,7 @@
 #import "JustOneLabelCell.h"
 #import "HandMadeOneLabelCell.h"
 #import "CustomFlowLayout.h"
+#import "HandMadeViewController.h"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -112,6 +113,11 @@
             break;
         }
         case 1: {
+            break;
+        }
+        case 2: {
+            HandMadeViewController *hmvc = [[HandMadeViewController alloc] init];
+            [self.navigationController pushViewController:hmvc animated:YES];
             break;
         }
         default:
