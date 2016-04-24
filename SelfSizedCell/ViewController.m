@@ -10,6 +10,7 @@
 
 #import "JustOneLabelCell.h"
 #import "HandMadeOneLabelCell.h"
+#import "CustomFlowLayout.h"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -33,6 +34,8 @@
 {
     self.title = @"Self Sized Cell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
+
+    CustomFlowLayout *flowLayout = [[CustomFlowLayout alloc] init];
     
     // register cells
     UINib *cellNib = [UINib nibWithNibName:@"JustOneLabelCell" bundle:nil];
@@ -40,6 +43,9 @@
 
     [self.collectionView registerClass:[HandMadeOneLabelCell class] forCellWithReuseIdentifier:@"HandMadeOneLabelCell"];
 
+    // use customed flow layout
+    self.collectionView.collectionViewLayout = flowLayout;
+    
     // setup collection view
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -47,16 +53,19 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
+    NSLog(@"numberOfSectionsInCollectionView");
     return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    NSLog(@"numberOfItemsInSection");
     return 3;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"cellForItemAtIndexPath - %d - %d", indexPath.section, indexPath.row);
     NSString *identifier = @"JustOneLabelCell";
     switch (indexPath.row) {
         case 2:
@@ -67,6 +76,9 @@
             break;
     }
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+
+    cell.backgroundColor = [UIColor grayColor];
+    
     if ([cell isKindOfClass:[JustOneLabelCell class]]) {
         JustOneLabelCell *item = (JustOneLabelCell *)cell;
         switch (indexPath.row) {
@@ -89,6 +101,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"sizeForItemAtIndexPath - %d - %d", indexPath.section, indexPath.row);
     return CGSizeMake(collectionView.frame.size.width, 50.0f);
 }
 
