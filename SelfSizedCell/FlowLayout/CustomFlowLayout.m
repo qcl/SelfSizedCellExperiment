@@ -35,7 +35,7 @@
     NSArray<UICollectionViewLayoutAttributes *> *attributes = [super layoutAttributesForElementsInRect:rect];
 
     [attributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"    attribute - %@", obj);
+        NSLog(@"    =attribute - %@", obj);
         // just a try to change attribute;
         /*
         CGRect frame = obj.frame;
@@ -49,7 +49,9 @@
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"CustomFlowLayout - layoutAttributesForItemAtIndexPath - %d - %d", indexPath.section, indexPath.row);
-    return [super layoutAttributesForItemAtIndexPath:indexPath];
+    UICollectionViewLayoutAttributes *attribute = [super layoutAttributesForItemAtIndexPath:indexPath];
+    NSLog(@"    ~attribute - %@", attribute);
+    return attribute;
 }
 
 @end

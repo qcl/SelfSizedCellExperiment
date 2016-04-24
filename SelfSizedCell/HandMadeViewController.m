@@ -9,6 +9,7 @@
 #import "HandMadeViewController.h"
 #import "HandMadeOneLabelCell.h"
 #import "JustOneLabelCell.h"
+#import "CustomFlowLayout.h"
 
 @interface HandMadeViewController () <UICollectionViewDataSource>
 
@@ -34,13 +35,14 @@
     self.title = @"純手工";
     self.view.backgroundColor = [UIColor redColor];
 
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-
+//    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    CustomFlowLayout *flowLayout = [[CustomFlowLayout alloc] init];
+    
     // If it didn't implement UICollectionViewFlowLayoutDelegate, cell size will be itemSize
-    flowLayout.itemSize = CGSizeMake(100.0f, 100.0f);
+    flowLayout.itemSize = CGSizeMake(100.0f, 50.0f);
 
     // If given estimatedItemSize, then cell with nib will use nib file's size,
-    flowLayout.estimatedItemSize = CGSizeMake(200.0f, 100.0f);
+    //flowLayout.estimatedItemSize = CGSizeMake(200.0f, 100.0f);
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     self.collectionView.backgroundColor = [UIColor whiteColor];

@@ -49,4 +49,18 @@
     [NSLayoutConstraint activateConstraints:@[leftMarginConstraint, centerYConstraint]];
 }
 
+- (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
+{
+    UICollectionViewLayoutAttributes *attribute = [super preferredLayoutAttributesFittingAttributes:layoutAttributes];
+    NSLog(@"prefered (without nib) called, %@", attribute);
+    
+    // make a change
+    CGRect frame = attribute.frame;
+    frame.size.width = 100.0f;
+    frame.size.height = 100.0f;
+    attribute.frame = frame;
+    
+    return attribute;
+}
+
 @end

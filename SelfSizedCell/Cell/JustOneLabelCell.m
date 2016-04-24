@@ -15,4 +15,21 @@
     // Initialization code
 }
 
+- (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
+{
+    UICollectionViewLayoutAttributes *attribute = [super preferredLayoutAttributesFittingAttributes:layoutAttributes];
+    NSLog(@"prefered (with nib) called, %@", attribute);
+
+    // make a change
+    CGRect frame = attribute.frame;
+    frame.size.width = 170.0f;
+    frame.size.height = 220.0f;
+    attribute.frame = frame;
+   
+    // 70 x 120 --> nothing
+    // 70 x 220 --> boom (at iphone 4 scree)
+    // 170 x 220 --> 3rd cell will change position (at iphone 6 screen)
+    return attribute;
+}
+
 @end
